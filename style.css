@@ -1,0 +1,1095 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');    
+@import url('https://fonts.googleapis.com/css2?family=Jersey+20:wght@400;700&display=swap');
+
+/*general setup*/
+body {  
+    font-family: 'Jersey 20', sans-serif;
+    background-color: #000612;
+}
+h1 {font-family: 'Jersey 20', sans-serif;color: #e8d240;font-size: 5rem; font-size: clamp(3.125rem, 10vw, 7.5rem); margin-bottom: 5px;}
+h2 {font-family: 'Jersey 20', sans-serif;color: #e8d240; font-size: 1.875rem; font-size: clamp(1.875rem, 7vw, 5rem); margin-bottom: 5px;}
+h3 {font-family: 'Jersey 20', sans-serif; color: #e8d240; font-size: 1.25rem; font-size: clamp(1rem, 6vw, 3.125rem);margin-bottom: 5px;}
+h4 {font-family: 'Inter', sans-serif;color: #fffcfc; font-size:1rem; font-size: clamp(0.825rem, 4vw, 2.3rem); margin-bottom: 5px;}
+p {font-family: 'Inter', sans-serif; color: #fffcfc; font-size: 0.625rem; font-size: clamp(0.625rem, 2vw, 1.5625rem); margin-top: 5px;}
+
+/*duong - index*/
+header {
+    color: #fffcfc;
+    text-align: center;   
+    }
+/*nav bar*/
+nav {
+    position: absolute; /* Places navbar over the intro */
+    top: 20px;
+    left: 70px;
+    right: 70px;
+    width: 90%; 
+    display: flex;
+    justify-content: center;
+    z-index: 10; 
+    border: 2px solid #fffcfc;
+}
+nav ul{
+    align-items: center;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    width: 90%;
+    flex-wrap: wrap;
+}
+nav ul a{
+    color: #fffcfc;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+}
+nav ul a:hover {
+    color: #e8d240;
+}
+nav ul a.active {
+    color: #e8d240;
+}
+/* intro image and content*/
+.intro-content {
+    position: relative;
+    background-image: url("images/bg.png"); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    place-content: center;
+    min-block-size: 20vh;
+    text-align: left;
+    padding-left: 70px;
+}
+
+.intro-content h3 {
+    color: #fffcfc;
+    margin-top: 5px;
+}
+/*youtube link and introduction*/
+.companyintro {
+    position: relative;
+    text-align: right;
+    padding-right: 80px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 6.25rem 0 6.25rem;
+}
+
+.companyintro img {
+    float: left;
+    margin-right: 2vh; /* Adds space between image and text */
+    width: clamp(300px, 35vw, 650px);
+    height: auto;
+    margin-left: 80px;
+    border: 2px solid #fff;
+    margin-top: 20px;
+}
+
+.companyintro .content {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: auto;
+    padding-left: 100px;
+    max-width:600px;
+}
+.companyintro h2 { color:#e8d240;}
+
+/*projects section */
+.pjcts {
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.pjcts h2 {
+    margin-bottom: 80px;
+    text-align: center;
+    margin-top: 5px;
+    color: #e8d240;
+}
+
+.img-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 0 50px 0;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    gap: clamp(30px, 5vw, 100px); 
+}
+
+.img-container a {
+    display: flex; 
+    margin-right: 80px; 
+}
+
+.img-container a:last-child {
+    margin-right: 0; 
+}
+
+.img-container img {
+    width: clamp(300px, 40vw, 550px);
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    border: 2px solid #fff;
+}
+
+.img-container img:hover {
+    transform: scale(1.05);
+}
+/*intro team section */
+.introteam {
+    text-align: center;
+}
+.introteam h2 {margin-top: 1px;}
+.introteam a {font-size: clamp(1rem, 2rem, 20px);}
+.pic-container {
+    display: grid;
+    grid-template-columns: (1fr);
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    grid-auto-rows: 1fr;
+    @media (width >= 60em) { grid-template-columns: repeat(2, 1fr);};
+    @media (width>= 40em) { grid-template-columns: repeat(2, 1fr);};
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+figure img {
+    max-width: 300px; 
+    height: 400px;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-size: clamp(1rem, 1.25rem, 20px);
+    font-weight: bold;
+    color: #fffcfc;
+    text-align: center;
+}
+/*end of duong-index*/
+
+/*han jobs*/
+.jobs-header h1 {text-align: center;}
+.jobs-header h3 {text-align: center;}
+.jobs-header{margin-top: 150px;}
+.typewriter {font-family: 'Jersey 20', sans-serif;color: #fffcfc; font-size:clamp(0.875rem, 25px, 1.875rem); margin-bottom: 5px;}
+.typewriter-text::before {
+    content: "Software Developer";
+    font-family: 'Jersey 20', sans-serif;color: #fffcfc; font-size:clamp(0.875rem, 25px, 1.875rem);
+    animation: words 6s steps(20) infinite;
+}
+@keyframes words {
+    0%, 34% {
+        content: "Software Developer";
+    }
+    35%, 69% {
+        content: " Data Analyst";
+    }
+    70%, 100% {
+        content: " Senior Backend Engineer";
+    }
+}
+.job-images { display: flex; 
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    gap: clamp(30px, 5vw, 100px); 
+    overflow-x: auto;
+    padding: 10px 0 30px 0;
+    white-space: nowrap;}
+.job-images img {
+    width: clamp(200px, 38vw, 500px);
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    border: 2px solid #fff;
+}
+.job-images img:hover {
+transform: scale(1.05);
+}
+.job-container h2 {
+    color: #e8d240;
+    text-align: left;
+}
+section a {
+            color:#FFFCFC;
+            text-decoration: none;
+}
+.job-container { 
+    display: flex;
+    align-items: top;
+    margin-bottom: 20px;
+}
+.job-container img { 
+    float: left;
+    margin-right: 40px; 
+    width: clamp(200px, 60vw, 600px);
+    height: 100%;
+    object-fit: cover;
+    margin-left: 70px;
+    border: 2px solid white;
+}
+.job-details { 
+    align-items: top;
+}
+.job-details p {text-align: left;}
+.job-details h2 {text-align: left;margin-top:0px;}
+details {
+    font-family: 'Inter', sans-serif;
+    color: #fffcfc;
+    font-size: clamp(0.625rem, 2vw, 1.5625rem);
+    margin-top: 5px; 
+    text-align: left; 
+}
+summary {
+    cursor: pointer; 
+    font-weight: bold; 
+    font-family: 'Inter', sans-serif; color: #fffcfc; 
+    font-size: clamp(0.7rem, 2vw, 1.5625rem); 
+    margin-top: 5px 
+}
+.aside-container {
+    display: flex; 
+    align-items: center; 
+    gap: 5px; 
+}
+aside {
+    padding: 20px; 
+    margin: 20px 0; 
+    background-color: #3c3b3b;
+    color: #fffcfc;
+    width: 25%;
+    float: right;
+    order: 2;
+}
+video {
+    display:flex; 
+    object-fit: cover; 
+    height: 100%; 
+    width: 75%;
+    order:1;
+}
+/*end of han jobs.html*/
+
+/*minh-apply.html*/
+/* Banner */
+.apply-banner {
+    text-align: center;
+    background: #1b1c55;
+    margin: 140px 0;
+    background-size: contain;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
+
+.apply-banner h1 span {
+    color: yellow;
+    font-size: clamp(1.875rem, 7vw, 5rem);;
+    font-style: italic;
+    
+}
+
+.apply-banner h1 {
+    font-size: clamp(1.875rem, 7vw, 5rem);;
+    font-style: italic;
+}
+
+.apply-banner button {
+    background: white;
+    color: black;
+    border-width: 3px;
+    font-size: clamp(0.875rem, 3vw, 2rem);
+    font-weight: bold;
+    font-family: 'Jersey 20', sans-serif;
+    width: clamp(100px, 20%, 20%);
+    height: auto;
+    margin-left: 12px;
+}
+/*Application Form*/
+.application-form {
+    background: #1b1c55;
+    padding: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 3ch;
+}
+
+.application-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px; 
+}
+
+#apply p {font-style: italic;  text-align: center;}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border: none;
+    padding: 20px;
+    font-size: clamp(0.825rem, 4vw, 2.3rem);
+    color:white;
+}
+
+.row-container input { 
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  gap: 10px;
+}
+
+.row-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row-container div {
+    flex: 1; 
+    margin-right: 20px;
+}
+
+input, select, textarea {
+    width: 90%;
+    padding: 23px;
+    font-size: clamp(0.725rem, 2vw, 1.5rem);
+    background-color: #000612;
+    color: #fffcfc;
+    border: 4px solid #fffcfc;
+    margin-top: 10px;
+}
+
+fieldset input { /*Help fieldset elements seperated*/
+    width: 5%;
+}
+
+fieldset {
+    border: 4px solid #fffcfc;
+    width: 90%;
+    padding: 20px;
+    background-color: #000612;
+}
+
+textarea {
+    height: auto;
+    max-width: 90%;
+}
+
+.state-select {
+    float: right;
+}
+
+select { /*Adjust the size of dropdown list "State" */
+    max-width: 90%;
+    height: auto;
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    margin-left: 8px;
+    cursor: pointer;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Tooltip text (hidden by default) */
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 12px;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+/* Show the tooltip text when hovering */
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Skill List */
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skills label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.skills input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+.skill-section {
+    display: inline-block;
+}
+
+.skills textarea {
+    width: 600px;
+    height: 100px;
+    margin-bottom: 50px;
+}
+
+.skill-section p {
+    margin-bottom: 40px;
+    margin-top: -15px;
+}
+
+/* Submit Button */
+
+.submit-btn {
+    background: yellow;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    margin-left: 370px;
+    padding: 15px;
+    cursor: pointer;
+    font-size: clamp(0.825rem, 4vw, 2.3rem);
+    font-weight: bold;
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-family: 'Jersey 20'
+}
+
+.submitted-message {
+    display: none;
+    color: green;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Jersey 20'
+}
+
+.submit-btn:focus + .submitted-message {
+    display: block;
+    content: "Submitted!";
+}
+
+.submit-btn:focus {
+    color: white;
+    background-color: green;
+    outline: none;
+    visibility: hidden;
+}
+
+.submit-btn:focus span {
+    display: none;
+}
+
+/*end of minh-apply.html*/
+
+/*nhu-abouthtml*/
+.abth2 {text-align: center;}
+.abt2light  {text-align: center; color: #fffcfc;}
+a {
+    color:#FFFCFC;
+    text-decoration: none;
+}
+.defition a {
+    color:#000612;
+    text-decoration: none;
+}
+.intro {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px auto;
+    position: relative; 
+    width: 91%;
+}
+.image-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 2px solid #FFFCFC;
+}
+.image-container h1 {
+    font-size: clamp(1.875rem, 8vw, 5rem);
+    color: #1b1c55;
+    position: absolute;
+    margin-left: 33%;
+    margin-bottom: 50%;
+}
+.team-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 150px;
+    margin-top: 200px;
+}
+section h2 {
+    font-size: 7vw;
+    color: #FFFCFC;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.definition {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.definition-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 150px; 
+    margin-top: 20px;
+}
+.defi {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 30%;
+    align-items: left;
+    gap: 20px;
+}   
+dl {
+    width: 75%;
+    background-color: #FFFCFC;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 22%;
+    margin-top: 10px;
+}
+dt, dd {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 10px;
+}
+dt {
+    font-weight: bold;
+    color: #000612;
+    width: 30%; 
+    text-align: left;
+    margin-left: 10px;
+}
+dd {
+    width: 65%; 
+    color: #000612;
+    line-height: 1.6;
+    margin-left: 0;
+    text-align: left;
+}
+.definition a {
+    color: #000612;
+    text-decoration: none;
+}
+
+.defi figure img{
+    width: 150px;
+    height: 150px; 
+    object-fit: cover; 
+    border: 2px solid #FFFCFC;
+    transition: transform 0.3s ease;
+    margin-top: 3%;
+    margin-right: 350px;
+}
+.team-member {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    width: 90%;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+}
+.team-member img {
+    width: 100%; 
+    height: 100%;
+    max-width: 350px;
+    height: 370px; 
+    object-fit: cover; 
+    border: 2px solid #FFFCFC;
+    transition: transform 0.3s ease;
+}
+.team-info {
+    position: relative;
+    border: 2px solid #FFFCFC;
+    padding: 20px;
+    width: 90%; 
+    max-width: 620px; 
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+    margin: 0 auto; 
+    margin-top: 10px;
+}
+.team-info h3 {
+    margin-top: 20px;
+    color: #E8D240;
+}
+.timetable h2 {
+    text-align: center;
+}
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 0 auto; 
+}
+th, td {
+    padding: 10px;
+    margin: 0;
+    border: 1px solid #FFFCFC;
+    text-align: center;
+    vertical-align: top;
+    width: 14.28%; 
+}
+th {
+    font-weight: bold;
+    color: #FFFCFC;
+}
+td {
+    height: 90px; 
+    position: relative;
+    padding: 5px; 
+}
+.TNE-1, .TNE-2, .VOV-1,.VOV-2, .STA-1,.STA-2, .COS, .MDA {
+    background-color: #1b1c55;
+    color: #FFFCFC;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: clamp(0.625rem, 2vw, 1.5625rem);
+    margin-TOP: 4px; 
+}
+.cell {
+    background-color: #000612;
+}
+.TNE-1:hover::after, .TNE-2:hover::after, .COS:hover::after, .STA-1:hover::after, .STA-2:hover::after, .VOV-1:hover::after, .VOV-2:hover::after,  .MDA:hover::after {
+    content: "Class: TNE - Han, Nhu, Minh"; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    z-index: 10;
+}
+.TNE-2:hover::after {
+    content: "Class: TNE - Duong";
+}
+.STA-1:hover::after {
+    content: "Class: STA - Han, Nhu";
+}
+.STA-2:hover::after {
+    content: "Class: STA - Duong";
+}
+.VOV-1:hover::after {
+    content: "Class: VOV - Han, Minh";
+}
+.VOV-2:hover::after {
+    content: "Class: VOV - Duong, Nhu";
+}
+.COS:hover::after {
+    content: "Class: COS - Duong, Han, Nhu, Minh";
+}
+.MDA:hover::after{
+    content: "Class: MDA - Minh"
+}
+.about {
+    width: 90%;
+    max-width: 1200px;
+    margin:  30px auto;
+    background-color: #1b1c55;
+
+}
+.about .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+    width: 90%;
+    flex-wrap: wrap;
+}
+.about .row .image-container{
+    flex: 1 1 300px;
+    text-align: center;
+    max-width: 350px;
+    padding: 30px;
+}
+.about .row .image-container img{
+    width: 100%; 
+    max-width: 350px;
+    height: 100%; 
+    max-height: 350px;
+    border: 6px solid #FFFCFC;
+    object-fit: cover; 
+}
+.about .row .content{
+    flex: 1 1 20px;
+}
+.text-container h3 {
+font-size: 36px;
+margin-bottom: 20px;
+color: #FFFCFC;
+}
+.about .row .content p{
+    flex: 1 1 20px;
+    text-align: left;
+}
+/*end of nhu-abouthtml*/
+
+/*enhancement*/
+
+.enh h1 {text-align: center;}
+.enh h3 {text-align: center;}
+.enhancement_table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 0 auto; 
+    color: white;
+    line-height: 20px;
+   
+}
+.enhancement_table th:nth-child(1), .enhancement_table td:nth-child(1) {
+    width: 5%;
+}
+
+.enhancement_table th:nth-child(2), .enhancement_table td:nth-child(2) {
+    width: 15%;
+}
+.enhancement_table th:nth-child(3), .enhancement_table  td:nth-child(3) {
+    width: 30%;
+}
+
+.enhancement_table th:nth-child(4), .enhancement_table td:nth-child(4) {
+    width: 50%;
+}
+.enhancement_table th, td {
+    margin: 0;
+    border: 1px solid #FFFCFC;
+    vertical-align: top;
+    table-layout: fixed;
+}
+.enhancement_table tr {padding: 0;}
+.enhancement_table  td:nth-child(3) {
+    font-size: clamp(0.625rem, 1vw, 1.5625rem);
+}
+.enhancement_table th {
+    font-weight: bold;
+    text-align: center;
+}
+.enhancement_table td {
+    text-align: center;
+    height: 90px; 
+    position: relative;
+    padding: 10px; 
+    font-size:clamp(0.625rem, 2vw, 1.5625rem) ;
+}
+.enhancement_table video {
+    flex: 1; 
+ object-fit: cover; 
+height: 100%; 
+ width: 100%;
+} /*end of enhancements */
+
+/*footer*/
+footer {
+    clear: both;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+    color: white;
+    margin-bottom: 50px;
+}
+
+footer p {
+    color: #fffcfc;
+    margin: 5px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    gap: clamp(20px, 2.604vw, 50px);
+}
+
+.footer-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.footer-section p:first-child {
+    font-weight: bold;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
+.footer-section a:hover {text-decoration: underline;}
+
+/*responsive section*/
+@media (max-width: 995px) {
+    nav {
+        width: 80%;
+        border: 2px solid #fffcfc;
+        display: flex;
+        align-items: center;
+        margin: auto;
+        margin-left: -10px;
+    }
+
+    nav ul {
+        gap: 10px;
+        align-items: center;
+        width: 90%;
+        padding-left:0;
+    }
+    nav ul a {display:flex; width: 70%; padding: 1px 0 1px 0; font-size: 0.825rem; }
+    nav.active {
+        display:flex;
+        transform: translateX(0);
+    }
+    /*duong*/
+    .intro-content {
+        background-size: contain; 
+        background-attachment: scroll; 
+        height: 80vh; 
+        padding-left: 40px; 
+    }
+    
+    .companyintro {
+            flex-direction: column; 
+            text-align: center;
+            padding-right: 0;
+            padding-left: 0;
+            align-items: center;
+            margin: 2rem 0 2rem;
+    }
+    
+    .companyintro .content {
+            padding-left: 0;
+            padding-right: 0;
+            text-align: center;
+    }
+    /*han*/
+    .job-container {
+        margin: 2rem 0 2rem;
+        flex-direction: column;
+        text-align:left;
+        padding-left: 2rem;
+        align-items:center;
+    }
+
+    .job-container img{
+        margin-bottom: 20px;
+    }
+    .aside-container {
+        flex-direction: column; 
+        text-align: left;
+        padding-right: 0;
+        padding-left: 0;
+        align-items: center;
+        margin: 2rem 0 2rem;
+    }
+    aside {
+        padding: 10px; 
+        margin: 20px 0; 
+        width: 70%;
+        order: 2;
+    }
+    /*nhu*/
+    .team-member {
+        flex-direction: column;
+        text-align: center;
+    }
+    .team-info {
+        width: 100%;
+        text-align: center;
+    }
+    .team-member img {
+        width: 100%; 
+        height: 250px;
+        object-fit: cover; 
+    }
+    .team-info {
+        width: 100%; 
+        text-align: center; 
+    }
+    .image-container h1 {
+        font-size: clamp(1.875rem, 7vw, 5rem);
+        position: absolute;
+    }
+    .image-container img {
+        margin-left: 33px;
+        margin-top: 10px;
+    }
+    .definition {
+        width: flex;
+        flex-direction: column;
+        align-items: center;
+    }     
+    .team-member {
+                flex-direction: column;
+                text-align: center;
+    }
+    .team-info {
+                width: 100%;
+                text-align: center;
+    }
+    .team-member img {
+                width: 100%; 
+                height: 250px;
+                object-fit: cover; 
+    }
+    .team-info {
+                width: 100%; 
+                text-align: center; 
+    }
+    .content h3, p {
+            text-align:justify;
+            padding-left: 20px;
+    }
+    .about .row {
+            gap: 1px;
+            background-color: #1b1c55;
+    }
+    .team-member {
+        width: 100%;
+    }
+    .team-member img {
+        max-width: 350px;
+        height: 370px; 
+        object-fit: cover; 
+        transition: transform 0.3s ease;
+    }
+    .team-info {
+        position: relative;
+        border: 2px solid #FFFCFC;
+        padding: 20px;
+        width: 70%; 
+        height: auto;
+    }
+    .team-info h3 {
+        margin-top: 10px;
+    }
+    .definition {
+        margin-top: 30px;
+    }
+    .definition-container {
+        display:flex;
+        flex-direction: column;
+        gap: 50px; 
+    }
+    .defi {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 20px; 
+        margin-top: 20px;
+        width: 100%;
+        margin-right: 50px;
+        scroll-behavior: smooth;
+        scrollbar-width: thin;
+        overflow-x: auto; 
+        white-space: nowrap;
+        padding: 10px 0 50px 0;
+    }  
+    .defi figure {
+        display: contents;
+        gap: 20px;
+    } 
+    dl {
+        width: auto;
+        margin-left: 15%;
+    }
+    figure a:last-child {
+        margin-right: 0px; 
+    }
+
+    .defi figure img{
+        width: 150px;
+        height: 150px; 
+        object-fit: cover; 
+        border: 2px solid #FFFCFC;
+        transition: transform 0.3s ease;
+        margin-top: 3%;
+        margin-right: 50px;
+    }
+    /*minh*/
+    .row-container input{
+        flex-direction: column;
+        grid-template-rows: auto, 1fr;
+     }
+     .row-container div {
+         flex: 2;
+         margin-right: 40px;
+     }
+/*enhancements*/
+     .enhancement_table video {
+        flex: 1; 
+       object-fit: fill;
+       height: 100%; 
+       width: 100%;
+    }
+    #enh {
+      margin-top: 120px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+}
