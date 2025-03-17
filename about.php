@@ -31,16 +31,16 @@
             <dd><a href="mailto:trungnguyen@swin.edu.vn">Tristan Nguyen</a></dd>
 
             <dt>Nguyen Le Thuy Duong</dt>
-            <dd>Sketched the website layout to create a well-structured and user-friendly design. Carefully planned the arrangement of sections to ensure an intuitive and visually appealing framework. Developed the homepage, making it engaging and informative as the main entry point for visitors. Developed the responsive application for all pages.</dd>
+            <dd>Implemented the "eoi" table in MySQL to efficiently store applicant data. She developed the PHP script (process_eoi.php) to validate and store form submissions, displaying a confirmation page with the unique EOInumber. Duong also built the HR manager interface (manage.php) to manage EOIs.</dd>
 
             <dt>Doan Gia Han</dt>
-            <dd>Conducted research and gathered information for the "Jobs" page. Collected details about available positions, job descriptions, and company hiring policies. Organized the content clearly and effectively to provide job seekers with accessible and informative application details.</dd>
+            <dd>Modularized the website by creating reusable include files for static elements like the menu, header, and footer using PHP. She also developed a dynamic system to store and display job descriptions from the MySQL database.</dd>
 
             <dt>Ngo Quynh Nhu</dt>
-            <dd>Researched and structured the content for the "About" page. Focused on presenting the company’s mission, vision, and core values. Ensured that the information was engaging and provided visitors with a deeper understanding of the company's background and objectives.</dd>
+            <dd>Created the "settings.php" file to ensure secure database connections across the website and updated the About page to reflect team contributions and the project timeline.</dd>
 
             <dt>Vo Nguyen Minh</dt>
-            <dd>Designed and developed the "Application Form" page. Ensured that the form was well-structured, easy to navigate, and capable of capturing all necessary applicant information. Focused on user-friendliness and efficiency to streamline the application process for candidates.</dd>
+            <dd>Assisted in designing the "eoi" table in MySQL and contributed to the development of the PHP script (process_eoi.php) for validating and storing form submissions. He also helped build the HR manager interface (manage.php) for managing EOIs.</dd>
         </dl>
         </div>
         <div class="defi">
@@ -122,13 +122,13 @@
                     </td>
                     <td class="cell">
                         <div class="VOV-1">10:00 - 13:00</div>
+                        <div class="COS">15:00 - 19:00</div>
                     </td>
                     <td class="cell">
                         <div class="STA-1">07:00 - 10:00</div>
                         <div class="VOV-2">10:00 - 13:00</div>
                     </td>
                     <td class="cell">
-                        <div class="COS">07:00 - 11:00</div>
                         <div class="STA-2">13:00 - 16:00</div>
                     </td>
                 </tr>
@@ -144,13 +144,13 @@
                     </td>
                     <td class="cell">
                         <div class="VOV-1">10:00 - 13:00</div>
+                        <div class="COS">15:00 - 19:00</div>
                     </td>
                     <td class="cell">
                         <div class="STA-1">07:00 - 10:00</div>
                         <div class="VOV-2">10:00 - 13:00</div>
                     </td>
                     <td class="cell">
-                        <div class="COS">07:00 - 11:00</div>
                         <div class="STA-2">13:00 - 16:00</div>
                     </td>
                 </tr>
@@ -166,13 +166,13 @@
                     </td>
                     <td class="cell">
                         <div class="VOV-1">10:00 - 13:00</div>
+                        <div class="COS">15:00 - 19:00</div>
                     </td>
                     <td class="cell">
                         <div class="STA-1">07:00 - 10:00</div>
                         <div class="VOV-2">10:00 - 13:00</div>
                     </td>
                     <td class="cell">
-                        <div class="COS">07:00 - 11:00</div>
                         <div class="STA-2">13:00 - 16:00</div>
                     </td>
                 </tr>
@@ -188,13 +188,13 @@
                     </td>
                     <td class="cell">
                         <div class="VOV-1">10:00 - 13:00</div>
+                        <div class="COS">15:00 - 19:00</div>
                     </td>
                     <td class="cell">
                         <div class="STA-1">07:00 - 10:00</div>
                         <div class="VOV-2">10:00 - 13:00</div>
                     </td>
                     <td class="cell">
-                        <div class="COS">07:00 - 11:00</div>
                         <div class="STA-2">13:00 - 16:00</div>
                     </td>
                 </tr>
