@@ -151,8 +151,20 @@
                 echo '<tr>';
                 foreach ($days as $day => $classes) {
                     echo "<td class='cell'>{$classes}</td>";
+                }
+                echo '</tr>';
+                echo '<tr>';
+                foreach ($days as $day => $classes) {
                     echo "<td class='cell'>{$classes}</td>";
+                }
+                echo '</tr>';
+                echo '<tr>';
+                foreach ($days as $day => $classes) {
                     echo "<td class='cell'>{$classes}</td>";
+                }
+                echo '</tr>';
+                echo '<tr>';
+                foreach ($days as $day => $classes) {
                     echo "<td class='cell'>{$classes}</td>";
                 }
                 echo '</tr>';
