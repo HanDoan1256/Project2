@@ -97,108 +97,75 @@
         </div>
     </section>
 
+     <?php
+    // Include database connection settings
+    require_once "settings_asm.php";
+    $conn = new mysqli($host, $user, $pwd, $sql_db);
+
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Fetch timetable data
+    $query = "SELECT * FROM timetable ORDER BY FIELD(day_of_week, 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday')";
+    $result = $conn->query($query);
+    ?>
+
     <section class="timetable">
         <h2>TIMETABLE</h2>
         <div>
-            <table>
-                <tr>
-                    <th>Sun</th>
-                    <th>Mon</th>
-                    <th>Tue</th>
-                    <th>Wed</th>
-                    <th>Thu</th>
-                    <th>Fri</th>
-                    <th>Sat</th>
-                </tr>
-                <tr>
-                    <td class="cell"></td>
-                    <td class="cell">
-                        <div class="MDA">13:00 - 16:00</div>
-                        <div class="TNE-2">13:00 - 17:00</div>
-                    </td>
-                    <td class="cell"></td>
-                    <td class="cell">
-                        <div class="TNE-1">07:00 - 11:00</div>
-                    </td>
-                    <td class="cell">
-                        <div class="VOV-1">10:00 - 13:00</div>
-                        <div class="COS">15:00 - 19:00</div>
-                    </td>
-                    <td class="cell">
-                        <div class="STA-1">07:00 - 10:00</div>
-                        <div class="VOV-2">10:00 - 13:00</div>
-                    </td>
-                    <td class="cell">
-                        <div class="STA-2">13:00 - 16:00</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="cell"></td>
-                    <td class="cell">
-                        <div class="MDA">13:00 - 16:00</div>
-                        <div class="TNE-2">13:00 - 17:00</div>
-                    </td>
-                    <td class="cell"></td>
-                    <td class="cell">
-                        <div class="TNE-1">07:00 - 11:00</div>
-                    </td>
-                    <td class="cell">
-                        <div class="VOV-1">10:00 - 13:00</div>
-                        <div class="COS">15:00 - 19:00</div>
-                    </td>
-                    <td class="cell">
-                        <div class="STA-1">07:00 - 10:00</div>
-                        <div class="VOV-2">10:00 - 13:00</div>
-                    </td>
-                    <td class="cell">
-                        <div class="STA-2">13:00 - 16:00</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="cell"></td>
-                    <td class="cell">
-                        <div class="MDA">13:00 - 16:00</div>
-                        <div class="TNE-2">13:00 - 17:00</div>
-                    </td>
-                    <td class="cell"></td>
-                    <td class="cell">
-                        <div class="TNE-1">07:00 - 11:00</div>
-                    </td>
-                    <td class="cell">
-                        <div class="VOV-1">10:00 - 13:00</div>
-                        <div class="COS">15:00 - 19:00</div>
-                    </td>
-                    <td class="cell">
-                        <div class="STA-1">07:00 - 10:00</div>
-                        <div class="VOV-2">10:00 - 13:00</div>
-                    </td>
-                    <td class="cell">
-                        <div class="STA-2">13:00 - 16:00</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="cell"></td>
-                    <td class="cell">
-                        <div class="MDA">13:00 - 16:00</div>
-                        <div class="TNE-2">13:00 - 17:00</div>
-                    </td>
-                    <td class="cell"></td>
-                    <td class="cell">
-                        <div class="TNE-1">07:00 - 11:00</div>
-                    </td>
-                    <td class="cell">
-                        <div class="VOV-1">10:00 - 13:00</div>
-                        <div class="COS">15:00 - 19:00</div>
-                    </td>
-                    <td class="cell">
-                        <div class="STA-1">07:00 - 10:00</div>
-                        <div class="VOV-2">10:00 - 13:00</div>
-                    </td>
-                    <td class="cell">
-                        <div class="STA-2">13:00 - 16:00</div>
-                    </td>
-                </tr>
-            </table>
+            <?php
+            // Display timetable for each day
+            if ($result && $result->num_rows > 0) {
+                // Initialize an array to hold timetable data for each day
+                $days = [
+                    'Sunday' => '',
+                    'Monday' => '',
+                    'Tuesday' => '',
+                    'Wednesday' => '',
+                    'Thursday' => '',
+                    'Friday' => '',
+                    'Saturday' => ''
+                ];
+
+                // Fill the days array with class information from the database
+                while ($row = $result->fetch_assoc()) {
+                    $day = $row['day_of_week'];
+                    $class_info = $row['class_name'] . " (" . $row['start_time'] . " - " . $row['end_time'] . ")";
+                    $days[$day] .= "<div class='{$row['class_name']}'>{$class_info}</div>";
+                }
+
+                // Output the timetable table
+                echo '<table>';
+                echo '<tr>
+                        <th>Sun</th>
+                        <th>Mon</th>
+                        <th>Tue</th>
+                        <th>Wed</th>
+                        <th>Thu</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                      </tr>';
+
+                // Print the rows for each day
+                echo '<tr>';
+                foreach ($days as $day => $classes) {
+                    echo "<td class='cell'>{$classes}</td>";
+                    echo "<td class='cell'>{$classes}</td>";
+                    echo "<td class='cell'>{$classes}</td>";
+                    echo "<td class='cell'>{$classes}</td>";
+                }
+                echo '</tr>';
+                echo '</table>';
+            } else {
+                echo "<p>No timetable data found.</p>";
+            }
+
+            // Close connection
+            $conn->close();
+            ?>
+        </div>
+    </section>
         </div>
     </section>
     
