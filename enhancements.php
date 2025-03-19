@@ -64,6 +64,18 @@
                     <td>A scroll bar of images displaying the past projects which helps the company website more informative and attractive to the candidates. The pictures are self-designed, with the presentation name and the project name listed on, also, this enhancement is a creative way to provide more information about the company. </td>
                     <td><video autoplay loop muted> <source src="images/ehm6.mp4" type ="video/mp4"></video> </td>
                 </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Login page</td>
+                    <td>A login page is implemented to ensure only admins get access to the managa page. With the function of lock the account for 3 minutes after the third failed trial, this enhance the security and privacy of the applicants' forms.</td>
+                    <td><video autoplay loop muted> <source src="images/ehm7.mp4" type ="video/mp4"></video> </td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Timetable database</td>
+                    <td>Apart from the EOI and the JOBs table, we also uploaded the timetable to the database so that we can dynamically generate new reports with fresh data as needed.</td>
+                    <td><video autoplay loop muted> <source src="images/ehm8.mp4" type ="video/mp4"></video> </td>
+                </tr>
             </table>
         </div>
     </section>
