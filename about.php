@@ -99,7 +99,7 @@
 
      <?php
     // Include database connection settings
-    require_once "settings_asm.php";
+    require_once "settings.php";
     $conn = new mysqli($host, $user, $pwd, $sql_db);
 
     if ($conn->connect_error) {
