@@ -32,16 +32,14 @@ if (isset($_POST['update_eoi']) && isset($_POST['new_status'])) {
 
 // search query
 $search_query = "SELECT * FROM eoi";
-if (!empty($_POST['job_ref_num']) || !empty($_POST['first_name']) || !empty($_POST['last_name'])) {
+if (!empty($_POST['job_ref_num']) || !empty($_POST['search_name'])) {
     $search_query .= " WHERE 1";
     if (!empty($_POST['job_ref_num'])) {
         $search_query .= " AND job_ref_num = '" . mysqli_real_escape_string($conn, $_POST['job_ref_num']) . "'";
     }
-    if (!empty($_POST['first_name'])) {
-        $search_query .= " AND first_name LIKE '%" . mysqli_real_escape_string($conn, $_POST['first_name']) . "%'";
-    }
-    if (!empty($_POST['last_name'])) {
-        $search_query .= " AND last_name LIKE '%" . mysqli_real_escape_string($conn, $_POST['last_name']) . "%'";
+    if (!empty($_POST['search_name'])) {
+        $search_name = mysqli_real_escape_string($conn, $_POST['search_name']);
+        $search_query .= " AND (first_name LIKE '%$search_name%' OR last_name LIKE '%$search_name%')";
     }
 }
 $result = mysqli_query($conn, $search_query);
@@ -61,8 +59,7 @@ $result = mysqli_query($conn, $search_query);
 <!-- form -->
 <form method="post">
     Job Reference: <input type="text" name="job_ref_num">
-    First Name: <input type="text" name="first_name">
-    Last Name: <input type="text" name="last_name">
+    Name: <input type="text" name="search_name" placeholder="Enter first name, last name, or both">
     <input type="submit" value="Search">
 </form>
 
